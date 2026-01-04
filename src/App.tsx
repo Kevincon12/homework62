@@ -15,8 +15,8 @@ const App = () => {
         <main className='container mt-5'>
             <Routes>
                 <Route path='/' element={(<Home/>)}/>
-                <Route path='/About' element={(<About/>)}/>
-                <Route path='Contacts' element={(<Contacts/>)}/>
+                <Route path='/about' element={(<About/>)}/>
+                <Route path='/contacts' element={(<Contacts/>)}/>
             </Routes>
         </main>
     </>

@@ -1,10 +1,7 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
 
-interface Props {
-    changeLocation: (location: string) => void;
-}
-
-const Navbar: React.FC<Props> = ({changeLocation}) => {
+const Navbar = () => {
     return (
         <nav className="navbar navbar-light bg-light">
             <div className="container d-flex align-items-center">
@@ -14,25 +11,15 @@ const Navbar: React.FC<Props> = ({changeLocation}) => {
 
                 <ul className="navbar-nav flex-row gap-4 ms-auto">
                     <li className="nav-item">
-                        <a
-                            href="#"
-                            className="nav-link text-black p-0"
-                            onClick={() => changeLocation('home')}
-                        >Home</a>
+                        <NavLink to='/' className="nav-link text-black p-0">Home</NavLink>
                     </li>
+
                     <li className="nav-item">
-                        <a
-                            href="#"
-                           className="nav-link text-black p-0"
-                            onClick={() => changeLocation('about')}
-                        >About</a>
+                        <NavLink to='/About' className="nav-link text-black p-0">About</NavLink>
                     </li>
+
                     <li className="nav-item">
-                        <a
-                            href="#"
-                            className="nav-link text-black p-0"
-                            onClick={() => changeLocation('contacts')}
-                        >Contacts</a>
+                        <NavLink to='/Contacts' className="nav-link text-black p-0">Contacts</NavLink>
                     </li>
                 </ul>
             </div>

@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Navbar = () => {
+interface Props {
+    changeLocation: (location: string) => void;
+}
+
+const Navbar: React.FC<Props> = ({changeLocation}) => {
     return (
         <nav className="navbar navbar-light bg-light">
             <div className="container d-flex align-items-center">

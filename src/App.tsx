@@ -18,10 +18,14 @@ const App = () => {
         content = (<Contacts/>)
     }
 
+    const changeLocation = (location: string) => {
+        setLocation(location);
+    }
+
   return (
     <>
         <header>
-            <Navbar/>
+            <Navbar changeLocation={changeLocation}/>
         </header>
         <main className='container mt-5'>
             {content}

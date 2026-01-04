@@ -1,10 +1,22 @@
-import { useState } from 'react'
+import {type ReactNode, useState} from 'react'
 import './App.css'
 import Home from "./containers/Home/Home.tsx";
 import Navbar from "./components/Navbar/Navbar.tsx";
+import About from "./containers/About/About.tsx";
+import Contacts from "./containers/Contacts/Contacts.tsx";
 
 const App = () => {
-  const [count, setCount] = useState(0)
+    const [location, setLocation] = useState<string>("home");
+
+    let content: ReactNode = null;
+
+    if (location === 'home') {
+        content = (<Home/>)
+    } else if (location === 'about') {
+        content = (<About/>)
+    } else if (location === 'contacts') {
+        content = (<Contacts/>)
+    }
 
   return (
     <>
@@ -12,7 +24,7 @@ const App = () => {
             <Navbar/>
         </header>
         <main className='container mt-5'>
-            <Home/>
+            {content}
         </main>
     </>
   )

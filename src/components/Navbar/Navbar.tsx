@@ -10,13 +10,25 @@ const Navbar = () => {
 
                 <ul className="navbar-nav flex-row gap-4 ms-auto">
                     <li className="nav-item">
-                        <a href="#" className="nav-link text-black p-0">Home</a>
+                        <a
+                            href="#"
+                            className="nav-link text-black p-0"
+                            onClick={() => changeLocation('home')}
+                        >Home</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link text-black p-0">About</a>
+                        <a
+                            href="#"
+                           className="nav-link text-black p-0"
+                            onClick={() => changeLocation('about')}
+                        >About</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link text-black p-0">Contacts</a>
+                        <a
+                            href="#"
+                            className="nav-link text-black p-0"
+                            onClick={() => changeLocation('contacts')}
+                        >Contacts</a>
                     </li>
                 </ul>
             </div>
